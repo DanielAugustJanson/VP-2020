@@ -9,6 +9,13 @@ if($hournow <6){
 if($hournow >= 8 and $hournow <= 18){
 	$partofday = "kooli aeg";
 }
+
+//Vaatame semestri kulgemist
+$semesterstart = new DateTime("2020-8-31");
+$semestrend = new DateTime("2020-12-13");
+$semesterduration =  $semesterstart->diff($semesterend);                                         
+$semesterdurationdays = $semesterduration->format("%r%a");
+$today = new DateTime("now");
 ?>
 
 
